@@ -3,10 +3,9 @@
 ## What is Android Jetpack?
 Jetpack is a suite of libraries, tools, and guidance to help developers write high-quality apps easier.
 Jetpack comprises the androidx package libraries, that provide backward compatibility, and that must be used after support version 28.00
+Below I will make a brief summary of the libraries seen in this project.
 
-## Libraries covered in this example
-
-### Navigation
+## Navigation
 - Handles user journey through the app
 - Removes complexity when moving from one screen to another
 - Handles complex cases like:
@@ -30,7 +29,7 @@ Jetpack comprises the androidx package libraries, that provide backward compatib
   </p>
   <p align=right><small><i>navigation graph used in this excercise</i></small></p>
   
-### LiveData
+## LiveData
 Is a component that is part of the Lifecycle framework that Android provides.
 
 - **It is an OBSERVABLE:** _Object that emits some data_
@@ -43,7 +42,7 @@ Is a component that is part of the Lifecycle framework that Android provides.
 
 - **Manages configuration Changes**
 
-### MVVM
+## MVVM
 Architectural Pattern (Model - View - ViewModel)
 
 - **VIEW** 
@@ -56,7 +55,7 @@ _It is the data_
 _It receives the data from the MODEL and prepares it in a way that the view can display it._
 _There is a **component** called ViewModel_
 
-### ViewModel
+## ViewModel
 
 - Lifecycle aware component
 - It has its own lifecycle
@@ -86,7 +85,7 @@ AndroidViewModel allows us to access the ApplicationContext, that has a lifecycl
 ```
 _This way, every time we create the fragment (this), the ViewModel will handle it the updated data, and we will NOT instanciate a new ViewModel, sine it has an independent lifecycle_
 
-### Retrofit
+## Retrofit
 
 - Third party library
 - Facilitates retrieving data from an API
@@ -104,7 +103,7 @@ _This way, every time we create the fragment (this), the ViewModel will handle i
   - Specifies the Base URL
   - Any required factory methods
 
-### Glide
+## Glide
 
 - Third party library
 - Image Loading and caching:
@@ -119,7 +118,7 @@ _Create a Glide Object, give it an URL, Give it an ImageView reference -> It wil
  - You must generate a class with the annotation @GlideExtension.
  - Its methods must be _static_ and to be annotated with @GlideOption
  
- ### Room
+ ## Room
  
  - **Abstraction layer over SQL**
  It allows us to store info on a local device in a DB while providing some Object Oriented functionality.
@@ -161,7 +160,7 @@ Room provides methods to do that either through _RxJava_ or using _Coroutines_.
 - Not checked at compile time:
 @RawQuery
 
-### Data Binding
+## Data Binding
 
 - **Bind Data and functionality to lyouts**   
 It removes some configuration from our _functional classes_ and it moves it into the layout.  
@@ -215,7 +214,7 @@ It allows us to attach the variables that we declare to that specific layout.
 - **@BindingAdapter**
 The one that allows us to create the custom attributes and allows us to attach custom functionality to the custom attributes
 
-### Palette
+## Palette
 
 - Facilitates application design
 - Extracts colors from images
@@ -229,7 +228,7 @@ The one that allows us to create the custom attributes and allows us to attach c
   - Dark muted
 
 
-### Notifications
+## Notifications
 
 - **Mesage outside the app**
 
@@ -272,7 +271,7 @@ Depending on the urgency of the action required by the user
 
 **Builder**
 
-### Preferences
+## Preferences
 
 - It is part of Android Jetpack Libraries
 - It allows users to change app functionality
