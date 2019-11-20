@@ -23,3 +23,9 @@ Jetpack comprises the androidx package libraries, that provide backward compatib
 - Navigation Graph
 - Nav host fragment
 - Nav controller
+
+  <p align=center>
+    <img src="doc/navigation_graph.png" alt="Navigation Graph" width=70%>
+  </p>
+  <p align=right><small><i>navigation graph used in this excercise</i></small></p>
+  
