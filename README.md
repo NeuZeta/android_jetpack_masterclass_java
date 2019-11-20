@@ -160,8 +160,58 @@ Room provides methods to do that either through _RxJava_ or using _Coroutines_.
 - Not checked at compile time:
 @RawQuery
 
+### Data Binding
 
+- **Bind Data and functionality to lyouts**   
+It removes some configuration from our _functional classes_ and it moves it into the layout.  
+You can bind:
+  - Data (variables, parameters, ...)
+  - Functionality (method calls, operators, ...)
 
+- **Reduce boilerplate code** . 
+Reduces the complexity of our classes
 
+- **Generated Classes**
+
+#### Bindings
+- **Variables** . 
+You can attach an object to a layout and have the values of that object automatically displayed on the screen  
+
+- **Method Calls**
+For instance listeners
+
+- **Custom Adapters**   
+It is a way for the databinding library to introduce parameters in our widgets or views
+
+- **Operators**
+
+#### Components
+
+- **Layout tag**
+```
+<layout> 
+```
+In the layout xml file.
+Must be the top element
+Must include the xmlns
+
+- **Data to bind**
+```
+<data>
+  <variable name = " "
+            type = " " />
+</data>
+```
+
+- **DataBindingUtil**
+Utility class that allows us to inflate the layout with our new <layout> element and provides some functionality to attach various elements to our layout.
+It is the connector class.
+
+- **_LayourName_ Binding**
+Generated class.
+It allows us to attach the variables that we declare to that specific layout.
+
+- **@BindingAdapter**
+The one that allows us to create the custom attributes and allows us to attach custom functionality to the custom attributes
 
 
