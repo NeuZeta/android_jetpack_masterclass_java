@@ -285,7 +285,25 @@ Depending on the urgency of the action required by the user
 - Preference
 - PreferenceFragment _extends PreferenceFragmentCompat_
 
+## Permissions
 
+**Protect user privacy**
+
+**Normal vs Dangerous permissions**
+- Normal permission: for instance Internet permission
+- Dangerous permission: Send SMS messages or Access User Contact List
+
+**Pre API 23 vs Post API 23 (Android M)**
+- Pre API 23: User had to accept all or nothing
+- Post API 23: The application will ask for the aproval of every dangerous permission.
+
+**Permission groups**
+Gouping related permissions.  
+For instance, _read contants_ and _write contacts_ are in the same group. Once the user accept one, the application has permissions for all the group.
+
+**A Fragment can't ask for permission, ony Activities can**
+
+#### Flowchart
 
 
 
