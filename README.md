@@ -305,21 +305,30 @@ For instance, _read contants_ and _write contacts_ are in the same group. Once t
 
 #### Flowchart
 
+ <p align=center>
+    <img src="doc/permissions_flowchart.png" alt="Navigation Graph" width=60%>
+ </p>
 
+## Sharing
 
+**Provide app information to other apps**
+We have multiple ways of doing it.
+One way is to provide a generic type of information and let the Android system to decide what app to use to handle that
 
+**Request functionality from other apps**
+For instance, if we require to take a photo, we could request the permission and then implement all the functionality. 
+Instead, is much easier to ask the system a photo. The system will automatically start the camera and allow the user to use it. Once the picture is taken, it will return the user to the app.
 
+#### Components
 
+**Intent**
+Is a request to start an activity, that can be in our app or outside.
 
+**Intent Extras**
+The information that we pass
 
+**startActivity (intent)**
+Used to provide some information to another activity
 
-
-
-
-
-
-
-
-
-
-
+**startActivityForResult (intent)**
+A way to request information from another app (camera example)
