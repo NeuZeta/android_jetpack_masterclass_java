@@ -84,3 +84,84 @@ AndroidViewModel allows us to access the ApplicationContext, that has a lifecycl
         viewModel = ViewModelProviders.of(this).get(ListViewModel.class);
 ```
 _This way, every time we create the fragment (this), the ViewModel will handle it the updated data, and we will NOT instanciate a new ViewModel, sine it has an independent lifecycle_
+
+### Retrofit
+
+- Third party library
+- Facilitates retrieving data from an API
+- Works with JSON, XML, and others
+- Works well with RxJava
+
+#### Components
+
+- POJO class (Plain Old Java Object)
+- API Interface
+  - Specifies the endpoints used
+  - Defines methods
+  - @GET, @POST, @PUT, ...
+- Service Class
+  - Specifies the Base URL
+  - Any required factory methods
+
+### Glide
+
+- Third party library
+- Image Loading and caching:
+_Create a Glide Object, give it an URL, Give it an ImageView reference -> It will load the image while doing the processing and the network communication on the **background thread**_
+- Provides image resize and display options
+
+#### Glide v.4
+
+- It works with a Generated API
+- You must create a class that extends AppGlideModule and has the annotation @GlideModule
+- Glide's generated API can be extended by both Applications and Libraries.
+ - You must generate a class with the annotation @GlideExtension.
+ - Its methods must be _static_ and to be annotated with @GlideOption
+ 
+ ### Room
+ 
+ - **Abstraction layer over SQL**
+ It allows us to store info on a local device in a DB while providing some Object Oriented functionality.
+ We don't need to manage the connection or inserting objects manually into tables.
+ 
+ - **Easily store objects in a DataBase**
+ 
+ - **Generated Classes**
+ It creates the classes that we need based on the **entities** that we provide. It does it at compile time.
+ 
+ - **Compile time checks**
+It makes sure we don't write any queries that are incompatible with the database functionality.
+
+- **Database migration functionality**
+
+- **Unit Testing functionality**
+
+- **Database access on background thread**  
+We access the DB asyncronously.  
+Android doesn't allow asyncronous communication on the main thread.  
+Room provides methods to do that either through _RxJava_ or using _Coroutines_.
+
+#### Setup
+
+- @Entity: POJO that stores some info. Room will transform this into a table.
+
+- @Dao (Data Access Object): It is an Interface. It is the object that provides the functionality (insert, update, ...)
+
+- @Database: It is the class that's going to create the database
+
+#### Queries
+
+- Checked at compile time:
+@Insert
+@Update
+@Delete
+@Query
+
+- Not checked at compile time:
+@RawQuery
+
+
+
+
+
+
