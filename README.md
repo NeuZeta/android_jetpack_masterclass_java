@@ -5,6 +5,7 @@ Jetpack is a suite of libraries, tools, and guidance to help developers write hi
 Jetpack comprises the androidx package libraries, that provide backward compatibility, and that must be used after support version 28.00
 
 ## Libraries covered in this example
+
 ### Navigation
 - Handles user journey through the app
 - Removes complexity when moving from one screen to another
@@ -213,5 +214,95 @@ It allows us to attach the variables that we declare to that specific layout.
 
 - **@BindingAdapter**
 The one that allows us to create the custom attributes and allows us to attach custom functionality to the custom attributes
+
+### Palette
+
+- Facilitates application design
+- Extracts colors from images
+- Colors can be applied to visual elements
+- Color profiles: 
+  - Light vibrant
+  - Vibrant
+  - Dark vibrant
+  - Light muted
+  - Muted
+  - Dark muted
+
+
+### Notifications
+
+- **Mesage outside the app**
+
+- **Provide info or bring the user to the app**
+
+- **Push notifications**
+Send a notification from a backend to a device.
+
+- **Can have attached actions**
+
+#### Types
+
+**Status bar / drawer notification**
+- First sign that something happened.
+- Icon at the top of the app
+- User can expand the notification drawer
+
+**Expanded notification**
+- Giving the user the option to increase the size of the notification and provide more information
+
+**Heads Up notification**
+- Higher importance. 
+- Will show up at the top of your screen even if you are using the phone. For instance, a *phone call*
+
+**Lock Screen notifications**
+- In the lock screen
+- It may be possible to expand it
+
+#### Components
+
+**Groups**
+A way for notifications to be grouped together. In example, when you have multiple emails.
+
+**Channels**
+Introduced in Android 8.0  
+Is a way to divide notifications into different channels and give the user the option to _turn off_ some of them
+
+**Importance**
+Depending on the urgency of the action required by the user
+
+**Builder**
+
+### Preferences
+
+- It is part of Android Jetpack Libraries
+- It allows users to change app functionality
+- Manages UI
+- Automatically stores updated preferences
+- Preferences are retrieved through **SharedPreferences**
+
+#### Components
+
+- PreferenceScreen XML
+- Preference
+- PreferenceFragment _extends PreferenceFragmentCompat_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
