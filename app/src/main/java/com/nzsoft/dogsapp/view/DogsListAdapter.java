@@ -38,13 +38,16 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
     public DogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         ItemDogBinding view = DataBindingUtil.inflate(inflater, R.layout.item_dog, parent, false);
-        return new DogViewHolder(view);
+
+        DogViewHolder holder = new DogViewHolder(view);
+        holder.itemView.setListener(this);
+
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull DogViewHolder holder, int position) {
         holder.itemView.setDog(dogsList.get(position));
-        holder.itemView.setListener(this);
     }
 
     @Override
